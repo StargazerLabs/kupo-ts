@@ -1,5 +1,5 @@
 import createClient, { Middleware } from "openapi-fetch";
-import { paths } from "./schema.ts";
+import { paths } from "./schema";
 import pLimit from "p-limit";
 import {
   DatumHash,
@@ -17,7 +17,7 @@ import {
   Result,
   ScriptHash,
   ScriptOrNull,
-} from "./types.ts";
+} from "./types";
 
 function error(msg: string | undefined) {
   return new Error(msg || "");
@@ -76,7 +76,7 @@ export class Kupo {
 
   async getMatches(
     pattern: Pattern,
-    query?: GetMatchesQuery,
+    query?: GetMatchesQuery
   ): Promise<Result<Matches>> {
     return await this._.GET("/matches/{pattern}", {
       params: { query, path: { pattern } },
@@ -112,7 +112,7 @@ export class Kupo {
 
   async resolveMatches(
     ms: Match[],
-    concurrency = 100,
+    concurrency = 100
   ): Promise<MatchResolved[]> {
     const limit = pLimit(concurrency);
     const mrs = ms.map((m) => limit(() => this.resolveMatch(m)));

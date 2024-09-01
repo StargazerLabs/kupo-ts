@@ -1,5 +1,5 @@
 import { ClientMethod, Middleware } from "openapi-fetch";
-import { components, paths } from "./schema.ts";
+import { components, paths } from "./schema";
 
 export type MediaType = `${string}/${string}`;
 
