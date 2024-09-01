@@ -3,13 +3,14 @@
   "version": "1.0.0",
   "description": "kupo client",
   "type": "module",
-  "engines": {
-    "node": ">=22.4.1"
-  },
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "build": "tsc",
     "update-schema": "openapi-typescript https://cardanosolutions.github.io/kupo/api/nightly.yaml -o ./src/schema.ts",
-    "dev": "tsx examples/query.ts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
