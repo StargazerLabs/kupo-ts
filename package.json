@@ -10,8 +10,7 @@
   ],
   "scripts": {
     "build": "tsc",
-    "update-schema": "openapi-typescript https://cardanosolutions.github.io/kupo/api/nightly.yaml -o ./src/schema.ts",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "update-schema": "openapi-typescript https://cardanosolutions.github.io/kupo/api/nightly.yaml -o ./src/schema.ts"
   },
   "keywords": [],
   "author": "waalge",
